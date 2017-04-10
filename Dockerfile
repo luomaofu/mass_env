@@ -8,13 +8,13 @@ RUN yum install epel-release python-setuptools -y
 RUN curl -LOs  https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz
 
 RUN tar zvxf pip-9.0.1.tar.gz && cd pip-9.0.1 && python setup.py install && cd .. && rm -rf pip*
- 
+
 RUN yum install gcc \
-	make \
-	python-devel  \
-	mysql-devel \
-	zeromq \
-	zeromq-devel \
+    make \
+    python-devel  \
+    mysql-devel \
+    zeromq \
+    zeromq-devel \
     bzip2-devel \
     libcurl \
     libcurl-devel \
@@ -36,11 +36,10 @@ RUN yum install gcc \
     zlib-devel \
     libyaml-devel \
     wget \
-	git \
-	vim \
+    git \
+    vim \
+    iotop \
     -y && yum clean all
-	
-RUN pip install --no-cache-dir pyzmq && pip install MySQL-python && pip install PyMySQL 
 
 COPY ./requirements.txt /tmp/
 
