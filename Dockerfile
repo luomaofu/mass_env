@@ -38,7 +38,7 @@ RUN yum install gcc \
     wget \
 	git \
 	vim \
-    && yum clean all
+    -y && yum clean all
 	
 RUN pip install pyzmq && pip install MySQL-python && pip install PyMySQL 
- 
+
