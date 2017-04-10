@@ -34,7 +34,7 @@ RUN yum install gcc \
     libxml2-devel \
     libxslt-devel \
     zlib-devel \
-    libyaml-devel
+    libyaml-devel \
     wget \
 	git \
 	vim \
