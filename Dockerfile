@@ -40,5 +40,9 @@ RUN yum install gcc \
 	vim \
     -y && yum clean all
 	
-RUN pip install pyzmq && pip install MySQL-python && pip install PyMySQL 
+RUN pip install --no-cache-dir pyzmq && pip install MySQL-python && pip install PyMySQL 
+
+COPY ./requirements.txt /tmp/
+
+RUN pip install  -r requirements.txt
 
