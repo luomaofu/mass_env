@@ -5,9 +5,7 @@ WORKDIR /tmp/
 
 RUN yum install epel-release python-setuptools -y
 
-RUN curl -LOs  https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz
-
-RUN tar zvxf pip-9.0.1.tar.gz && cd pip-9.0.1 && python setup.py install && cd .. && rm -rf pip*
+RUN curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py
 
 RUN yum install gcc \
     make \
