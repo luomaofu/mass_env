@@ -36,6 +36,7 @@ RUN yum install gcc \
     wget \
     git \
     vim \
+    nginx \
     iotop \
     -y && yum clean all
 
